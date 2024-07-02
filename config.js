@@ -5,5 +5,5 @@ const config = {
     guest: "kellerUserm",
     dev: "nigsup",
   },
-}
-export default config
+};
+export default config;
