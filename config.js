@@ -6,4 +6,5 @@ const config = {
     dev: "nigsup",
   },
 };
+
 export default config;

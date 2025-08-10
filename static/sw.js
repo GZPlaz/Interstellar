@@ -1,8 +1,8 @@
-importScripts("/assets/-dy/config.js?v=6-17-2024");
-importScripts("/assets/-dy/worker.js?v=6-17-2024");
-importScripts("/assets/-uv/bundle.js?v=6-17-2024");
-importScripts("/assets/-uv/config.js?v=6-17-2024");
-importScripts(__uv$config.sw || "/assets/-uv/sw.js?v=6-17-2024");
+importScripts("/assets/history/config.js?v=2025-04-15");
+importScripts("/assets/history/worker.js?v=2025-04-15");
+importScripts("/assets/mathematics/bundle.js?v=2025-04-15");
+importScripts("/assets/mathematics/config.js?v=2025-04-15");
+importScripts(__uv$config.sw || "/assets/mathematics/sw.js?v=2025-04-15");
 
 const uv = new UVServiceWorker();
 const dynamic = new Dynamic();

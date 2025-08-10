@@ -1,19 +1,33 @@
+// i.js
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../sw.js?v=6-17-2024", {
+  navigator.serviceWorker.register("../sw.js?v=2025-04-15", {
     scope: "/a/",
   });
 });
 
-const form = document.getElementById("fs");
-const input = document.getElementById("is");
+let xl;
+
+try {
+  xl = window.top.location.pathname === "/d";
+} catch {
+  try {
+    xl = window.parent.location.pathname === "/d";
+  } catch {
+    xl = false;
+  }
+}
+
+const form = document.getElementById("fv");
+const input = document.getElementById("iv");
 
 if (form && input) {
   form.addEventListener("submit", async event => {
     event.preventDefault();
-    if (window.top.location.pathname === "/ta") {
-      processUrl(input.value, "");
-    } else {
-      processUrl(input.value, "/ta");
+    try {
+      if (xl) processUrl(input.value, "");
+      else processUrl(input.value, "/d");
+    } catch {
+      processUrl(input.value, "/d");
     }
   });
 }
@@ -41,7 +55,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, "/ta");
+  processUrl(value, "/d");
 }
 
 function blank(value) {
